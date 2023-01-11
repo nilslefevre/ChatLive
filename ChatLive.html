@@ -48,7 +48,20 @@
                 isOfflineSupportEnabled: true
             }
         );
-    };
+    }
+    embedded_svc.settings.extraPrechatFormDetails = [{
+            "label": "URL",
+            "value":  window.location.href,
+            "displayToAgent": true,
+            "transcriptFields": ["URL_initiated_chat__c"]
+         },
+         {
+            "label": "Marketplace",
+            "value":  "di",
+            "displayToAgent": true,
+            "transcriptFields": ["Marketplace__c"]
+         }
+         ];
 
     if (!window.embedded_svc) {
         var s = document.createElement('script');
